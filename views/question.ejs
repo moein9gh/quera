@@ -1,0 +1,30 @@
+<%- include('./partials/header.ejs') %>
+<%- include('./partials/loader.ejs') %>
+
+
+<div class="Container d-flex align-items-center flex-column mt-4">
+    <section class="border-bottom">
+        <h1 class="text-primary text-center"><%= title %></h1>
+    </section>
+    <section class="border-bottom m-3">
+        <h4 class="text-primary text-center"><%= body %></h4>
+    </section>
+    <section class="border-bottom m-3">
+        <h5 class="text-primary text-center">For Example :</h5>
+        <ul>
+            <% for(var i = 0; i < examples.length; i++) { %>
+            <li class="text-decoration-none p-2 fs-5 nav-item text-primary">
+                <span>input : <%= examples[i].input %></span> ===> <span>output : <%= examples[i].output %></span></li>
+            <% } %>
+        </ul>
+    </section>
+    <section class="d-flex flex-column justify-content-center align-items-center">
+        <input id="file" accept=".cpp" type="file" class="m-3">
+        <h5 class="text-danger text-center">* choose your .cpp file and press START button</h5>
+    </section>
+
+    <button id="submit-btn" class="m-5 w-25 rounded btn-dark">START</button>
+</div>
+<script src="/js/submit.js"></script>
+<%- include('./partials/footer.ejs') %>
+

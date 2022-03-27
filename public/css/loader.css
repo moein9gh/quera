@@ -1,0 +1,39 @@
+.loader {
+    display: none;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #ffc107;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+}
+body, html {
+    height: 100%;
+}
+/* Safari */
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.parent{
+
+    display: none;
+    /* Add the blur effect */
+    position: absolute;
+
+    height: calc(100% - 52px);
+    width: 100%;
+
+    background: white;
+    opacity: .7;
+}
